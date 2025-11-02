@@ -1,191 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>🔥Mahalaxmi App | Trusted by 10,000+ Indian Users</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WinMate App – Play Smart, Earn Smart</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
-<style>
-  body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-    color: #222;
-  }
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #0c0c0c;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
 
-  .container {
-    max-width: 420px;
-    margin: 0 auto;
-    background: #fff;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
+    .app-container {
+      max-width: 420px;
+      width: 100%;
+      background: rgba(20,20,20,0.9);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 0 30px rgba(255, 0, 150, 0.3);
+    }
 
-  header {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    background: linear-gradient(90deg, #007bff, #00d4ff);
-    color: white;
-  }
+    .app-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
 
-  header img {
-    width: 60px;
-    height: 60px;
-    border-radius: 12px;
-    margin-right: 15px;
-  }
+    .app-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: 0 0 10px #ff007f;
+    }
 
-  header h1 {
-    font-size: 1.4rem;
-    margin: 0;
-  }
+    .app-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-shadow: 0 0 6px #ff007f;
+    }
 
-  header p {
-    font-size: 0.85rem;
-    margin: 2px 0 0 0;
-  }
+    .app-tagline {
+      font-size: 0.95rem;
+      margin-top: 6px;
+      color: #bbb;
+    }
 
-  .hero-img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
+    .rating {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: #ffcc33;
+    }
 
-  .tagline {
-    text-align: center;
-    font-size: 1rem;
-    padding: 12px 16px;
-    color: #333;
-  }
+    .download-btn {
+      display: block;
+      text-align: center;
+      margin: 25px 0;
+      background: #ff007f;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 0 15px #ff007f;
+      animation: pulse 1.5s infinite;
+    }
 
-  .download-btn {
-    display: block;
-    width: 90%;
-    margin: 20px auto;
-    background: #00b33c;
-    color: white;
-    text-align: center;
-    padding: 14px 0;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 1rem;
-    text-decoration: none;
-    position: relative;
-    animation: pulse 1.5s infinite;
-  }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 15px #ff007f; }
+      50% { box-shadow: 0 0 35px #ff007f; }
+    }
 
-  @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(0,179,60,0.7); }
-    70% { box-shadow: 0 0 0 12px rgba(0,179,60,0); }
-    100% { box-shadow: 0 0 0 0 rgba(0,179,60,0); }
-  }
+    .description {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #ddd;
+      margin-bottom: 25px;
+      text-align: justify;
+    }
 
-  .stats {
-    text-align: center;
-    font-size: 0.95rem;
-    color: #666;
-  }
+    .screenshots {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
 
-  /* Reviews Section */
-  .reviews {
-    padding: 15px;
-  }
+    .review-card {
+      background: #141414;
+      border-radius: 10px;
+      padding: 14px;
+      box-shadow: 0 0 10px rgba(255, 0, 127, 0.2);
+      margin-bottom: 14px;
+    }
 
-  .reviews h2 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
+    .review-name {
+      font-weight: 600;
+      color: #ff66b2;
+      font-size: 1rem;
+    }
 
-  .review-count {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-  }
+    .review-text {
+      color: #ccc;
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
 
-  .review {
-    border-top: 1px solid #eee;
-    padding: 10px 0;
-  }
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+      margin-top: 30px;
+    }
 
-  .review h3 {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 500;
-  }
-
-  .stars {
-    color: #ffb400;
-    font-size: 0.9rem;
-  }
-
-  .review p {
-    font-size: 0.9rem;
-    color: #444;
-    margin-top: 5px;
-  }
-
-  footer {
-    text-align: center;
-    font-size: 0.85rem;
-    color: #777;
-    padding: 15px;
-  }
-</style>
+    /* Responsive for mobiles */
+    @media (max-width: 480px) {
+      .app-title { font-size: 1.5rem; }
+      .download-btn { font-size: 1rem; }
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
-  <header>
-    <img src="mahalaxmilogo.png" alt="App Logo">
-    <div>
-      <h1>Mahalaxmi App</h1>
-      <p>Play And Get Instant Rewars.</p>
-    </div>
-  </header>
-
-  <img src="assets/app-banner.jpg" class="hero-img" alt="App Banner">
-
-  <div class="tagline">100% Genuine Indian Game App 🇮🇳</div>
-
-  <div class="stats">⭐ 4.8 · 200 Reviews · 10K+ Downloads</div>
-
-  <a href="https://github.com/mahalaxmiapp/official/releases/download/v1/myapp.apk" class="download-btn">Download Now</a>
-
-  <!-- Reviews -->
-  <section class="reviews">
-    <h2>What Indian Users Say</h2>
-    <div class="review-count">Based on 200 reviews</div>
-
-    <div class="review">
-      <h3>Rohit Sharma <span class="stars">★★★★★</span></h3>
-      <p>Been using it for a month! 100% genuine app — instant withdrawal and smooth experience.</p>
+  <div class="app-container">
+    <!-- Header -->
+    <div class="app-header">
+      <img src="mahalaxmilogo.png" alt="App Icon" class="app-icon" />
+      <div>
+        <div class="app-title">WinMate</div>
+        <div class="app-tagline">Play. Predict. Win Cash Instantly.</div>
+        <div class="rating">⭐⭐⭐⭐⭐ 4.8 · 200 Reviews</div>
+      </div>
     </div>
 
-    <div class="review">
-      <h3>Amit Verma <span class="stars">★★★★★</span></h3>
-      <p>Trusted app!. Highly recommended.</p>
+    <!-- Download Button -->
+    <a href="https://github.com/mahalaxmiapp/official/releases/download/v1/myapp.apk
+" class="download-btn" download>Download Now</a>
+
+    <!-- App Description -->
+    <div class="description">
+      WinMate is India’s most trusted gaming and prediction app built for smart players.  
+      Compete in daily matches, predict outcomes, and win real cash instantly.  
+      Experience seamless gameplay, instant withdrawals, and transparent results — all in one secure app.  
+      Designed for Indian users, WinMate ensures a smooth experience with 24×7 support and lightning-fast payouts.
     </div>
 
-    <div class="review">
-      <h3>Rahul Singh <span class="stars">★★★★☆</span></h3>
-      <p>Real, no fake promises.!</p>
+    <!-- User Reviews -->
+    <div class="review-card">
+      <div class="review-name">Rohit Sharma</div>
+      <div class="review-text">“Been using this app for a month — instant withdrawal every time. 100% genuine!”</div>
     </div>
 
-    <div class="review">
-      <h3>Vikas Mehta <span class="stars">★★★★★</span></h3>
-      <p>This is a trustworthy app — finally something that works in India!</p>
+    <div class="review-card">
+      <div class="review-name">Amit Verma</div>
+      <div class="review-text">“Finally an Indian app I can trust! Smooth interface and real cash rewards.”</div>
     </div>
-  </section>
 
-  <footer>© 2025 Mahalaxmi App · All rights reserved</footer>
-</div>
+    <div class="review-card">
+      <div class="review-name">Suresh Yadav</div>
+      <div class="review-text">“Love this app! Got my payout within minutes. Highly recommended.”</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-name">Manoj Patel</div>
+      <div class="review-text">“I play daily and earn real rewards. Best app for genuine fun and earning.”</div>
+    </div>
+
+    <footer>
+      © 2025 WinMate App · Made in India 🇮🇳
+    </footer>
+  </div>
+
+  <!-- Meta Pixel Code (Deferred for performance) -->
+  <script>
+    window.requestIdleCallback(function() {
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1822396645303128');
+      fbq('track', 'PageView');
+    });
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1822396645303128&ev=PageView&noscript=1"/>
+  </noscript>
 
 </body>
 </html>
