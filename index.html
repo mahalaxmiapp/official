@@ -3,73 +3,179 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joker Tennis</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+  <title>Mahalaxmi App – Download Now</title>
+
   <style>
-    body {
-      background: #0a0a0a;
-      color: white;
-      font-family: 'Inter', sans-serif;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100vh;
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
     }
-    .subscriber-counter {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #10b981;
-      margin-top: 0.25rem;
+
+    body {
+      background-color: #f7f7f7;
+      color: #222;
+      max-width: 480px;
+      margin: 0 auto;
+      padding-bottom: 50px;
     }
-    .cta-btn {
-      background: linear-gradient(90deg, #06b6d4, #3b82f6);
+
+    .app-header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-bottom: 1px solid #eee;
+    }
+
+    .app-header img {
+      width: 80px;
+      height: 80px;
+      border-radius: 16px;
+      margin-right: 15px;
+    }
+
+    .app-title {
+      flex: 1;
+    }
+
+    .app-title h1 {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .app-title p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      margin-top: 6px;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    .rating span {
+      color: gold;
+      margin-right: 6px;
+      font-size: 1rem;
+    }
+
+    .install-btn {
+      display: block;
+      background-color: #1A73E8;
       color: white;
-      padding: 0.8rem 2rem;
-      border-radius: 9999px;
-      font-weight: 700;
-      font-size: 1.1rem;
-      margin-top: 1.2rem;
-      transition: transform 0.2s ease, opacity 0.2s ease;
+      text-align: center;
+      margin: 15px 20px;
+      padding: 12px 0;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 0 15px rgba(26, 115, 232, 0.6);
+      transition: all 0.3s ease;
     }
-    .cta-btn:hover {
-      transform: scale(1.05);
-      opacity: 0.9;
+
+    .install-btn:hover {
+      background-color: #1669c1;
+      transform: scale(1.02);
+    }
+
+    .screenshots {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      padding: 10px 20px;
+      margin-bottom: 20px;
+    }
+
+    .screenshots img {
+      border-radius: 12px;
+      height: 300px;
+      width: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .about {
+      padding: 0 20px;
+    }
+
+    .about h2 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .about p {
+      line-height: 1.5;
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    /* Neon Glow Option */
+    .neon {
+      text-shadow: 0 0 5px #00e6e6, 0 0 10px #00e6e6, 0 0 15px #00ffff;
+    }
+
+    @media (max-width: 500px) {
+      body { padding-bottom: 70px; }
+      .screenshots img { height: 240px; }
+      .install-btn { margin: 15px; }
     }
   </style>
 </head>
+
 <body>
-  <div class="flex flex-col items-center">
-    <!-- Channel DP -->
-    <img src="your-dp.webp" alt="Joker Tennis DP" width="120" height="120" class="rounded-full mb-4 shadow-lg">
 
-    <!-- Channel Heading -->
-    <h1 class="text-3xl font-bold text-white">🎾 Joker Tennis</h1>
+  <!-- Header -->
+  <section class="app-header">
+    <img src="assets/app-icon.png" alt="App Icon">
+    <div class="app-title">
+      <h1 class="neon">Mahalaxmi App</h1>
+      <p>by GameTech Studio</p>
+      <div class="rating">
+        <span>★</span> 4.8 • 10K+ downloads
+      </div>
+    </div>
+  </section>
 
-    <!-- Subscriber Counter -->
-    <div class="subscriber-counter" id="subscriberCount">43,989</div>
+  <!-- Install Button -->
+  <a href="https://github.com/kalyansatkmatta/app/releases/download/v1.0/myapp.apk" target="_blank" class="install-btn neon">
+    Install
+  </a>
 
-    <!-- Tagline -->
-    <p class="text-gray-300 text-lg mt-2">All Tennis Matches Reports Here.</p>
+  <!-- Screenshots -->
+  <section class="screenshots">
+    <img src="assets/screen1.jpg" alt="screenshot1">
+    <img src="assets/screen2.jpg" alt="screenshot2">
+    <img src="assets/screen3.jpg" alt="screenshot3">
+  </section>
 
-    <!-- CTA Button -->
-    <a href="https://t.me/yourchannel" class="cta-btn">Join My Free Telegram Channel</a>
+  <!-- About -->
+  <section class="about">
+    <h2>About this App</h2>
+    <p>
+      🎾 Master the art of tennis with <strong>Tennis Master</strong> — your all-in-one tennis companion!  
+      Track matches, learn techniques, and challenge global players.  
+      Lightweight, fast, and made for tennis enthusiasts everywhere.
+    </p>
+  </section>
 
-    <!-- Bottom Line -->
-    <p class="text-gray-400 text-sm mt-6">Sabse Genuine and Accurate Kaam Milega Yaha par.</p>
-  </div>
+  <!-- Footer -->
+  <footer>
+    © 2025 Tennis Master • All rights reserved
+  </footer>
 
-  <script>
-    let count = 43989;
-    const counterEl = document.getElementById('subscriberCount');
-
-    function updateCount() {
-      count++;
-      counterEl.textContent = count.toLocaleString();
-    }
-
-    setInterval(updateCount, 1000);
-  </script>
 </body>
 </html>
