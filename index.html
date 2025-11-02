@@ -186,10 +186,10 @@
 
   <footer>© 2025 Mahalaxmi App · All rights reserved</footer>
 </div>
-  <!-- Meta Pixel Code (Optimized for Performance) -->
+ <!-- Meta Pixel Code (Optimized for GitHub Pages) -->
 <script>
-  window.requestIdleCallback = window.requestIdleCallback || function(cb){ setTimeout(cb, 1); };
-  window.requestIdleCallback(function() {
+(function() {
+  function loadPixel() {
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -200,7 +200,16 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '32336017656014164');
     fbq('track', 'PageView');
-  });
+    console.log('✅ Meta Pixel initialized successfully.');
+  }
+
+  // Load Pixel only after the full page is ready
+  if (document.readyState === 'complete') {
+    loadPixel();
+  } else {
+    window.addEventListener('load', loadPixel);
+  }
+})();
 </script>
 
 <noscript>
